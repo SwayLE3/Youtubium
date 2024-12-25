@@ -48,10 +48,9 @@ class MyTestClass(BaseCase):
         link_enter = self.find_element(By.ID, "video-url")
         link_enter.send_keys(link)
         
-        convertButton = self.find_element(By.ID, "convert-button")
+        convertButton = self.find_element(By.ID, "convert-button-1")
         convertButton.click()
 
-        wait = WebDriverWait(self, 10)
-        wait.until(EC.title_is("SeleniumHQ Browser Automation"))
+        self.sleep(4)
         keyboard.press_and_release('enter')
         self.sleep(4)
